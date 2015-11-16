@@ -1,7 +1,6 @@
-Feature: Validate CSDL
-  Ensure that we can validate CSDL
+Feature: Core
 
-  Scenario: A valid user can validate CSDL
-    Given A valid username and API key
-    When I call validate
-    Then I should get back a validation response
+  Scenario Outline:
+    Given CSDL to validate like 'interaction.content contains "moo"
+    When I call the validate endpoint
+    Then I should get a validation with a dpu cost
