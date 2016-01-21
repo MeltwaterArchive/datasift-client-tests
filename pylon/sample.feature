@@ -1,7 +1,8 @@
 Feature: POST /pylon/sample
 
   Scenario: Sample with valid parameters
-    Given that the request body is valid JSON
+    Given a mock exists
+    And returns this body and status code "200" at the path "/behat-v1.3/pylon/analyze"
     """
       {
           "id": "1234",
