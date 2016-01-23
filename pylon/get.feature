@@ -55,9 +55,9 @@ Feature: GET /pylon/get
       """
         {
           "count": 1,
-          "page": 1,
+          "page": 10,
           "pages": 1,
-          "per_page": 10,
+          "per_page": 2,
           "subscriptions": [
             {
               "id": "some-recording-id",
@@ -81,9 +81,9 @@ Feature: GET /pylon/get
       """
         {
           "count": 1,
-          "page": 1,
+          "page": 10,
           "pages": 1,
-          "per_page": 10,
+          "per_page": 2,
           "subscriptions": [
             {
               "id": "some-recording-id",
@@ -110,7 +110,6 @@ Feature: GET /pylon/get
           "count": 1,
           "page": 1,
           "pages": 1,
-          "per_page": 10,
           "subscriptions": [
             {
               "id": "some-recording-id",
@@ -134,7 +133,6 @@ Feature: GET /pylon/get
       """
         {
           "count": 1,
-          "page": 1,
           "pages": 1,
           "per_page": 10,
           "subscriptions": [

@@ -1,7 +1,7 @@
 Feature: POST /pylon/analyze
 
   Scenario: Analyze with valid parameters
-    Given a mock exists
+    Given an analysis mock exists
     And returns this body and status code "200" at the path "/behat-v1.3/pylon/analyze"
       """
         {
@@ -36,7 +36,7 @@ Feature: POST /pylon/analyze
     """
 
   Scenario: Analyze without id
-    Given a mock exists
+    Given an analysis mock exists
     And returns error "No id was supplied." and status code "400"
     When an analysis request is made with no recording id, analysisType "freqDist", parameters interval "hour" and target "fb.author.gender"
     Then the analyze response status code should be "400"

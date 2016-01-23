@@ -1,18 +1,18 @@
 Feature: PUT /pylon/start
 
   Scenario: Start with name and hash
-    Given that the request body is valid JSON
+    Given a start mock exists
+    And returns start body and status code "200" at the path "/behat-v1.3/pylon/start"
     """
       {
-        "name": "abc",
-        "hash": "83fa8c8f21c44698be111fa0c1372a40"
+          "id": "1234"
       }
-     """
-    When I make a "PUT" request to "/v1.3/pylon/start"
-    Then the response status code should be "200"
-    And the response body contains the JSON data
+    """
+    When a start request is made with hash "1234" and name "name"
+    Then the start response status code should be "200"
+    And the start response body contains the JSON data
     """
       {
-        "id": "1234"
+          "id": "1234"
       }
     """
