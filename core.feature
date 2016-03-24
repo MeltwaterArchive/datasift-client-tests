@@ -16,7 +16,7 @@ Feature: Core
 
     Examples:
       | CSDL                                 |
-      | 'interaction.sample < 1' |
+      | 'interaction.sample < 2' |
 
   Scenario:
     When I call the usage endpoint
